@@ -1,5 +1,8 @@
 # My settings
 Include:
-* vim
+* bash
+* bin
+* git
 * tmux
-* Oh My Zsh shell
+* vim
+* zsh
