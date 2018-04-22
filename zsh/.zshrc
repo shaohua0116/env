@@ -88,6 +88,9 @@ source $ZSH/oh-my-zsh.sh
 export PYTHONPATH=/home/admin/caffe/python:$PYTHONPATH
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/../../usr/local/cuda/lib64:~/../../usr/local/lib/python2.7/dist-packages/torch/lib/
 
+# Plugin
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 # GPU
 export CUDA_DEVICE_ORDER=PCI_BUS_ID
 
@@ -117,6 +120,7 @@ alias agi='sudo apt-get install'
 alias update='sudo apt-get update'
 alias clc='clear'
 alias ta='tmux a'
+alias tl='tmux ls'
 
 
 # gpu
@@ -130,10 +134,15 @@ alias ax="chmod a+x"                                               # make execut
 
 # tensorflow
 alias tb="/home/walter/.local/bin/tb"
+alias imageserver="/home/walter/.local/bin/imageserver"
 
 # tools
 alias py="python"
 alias ipy="ipython"
+
+# X org
+alias checkX="ps ax | grep X"
+alias launchX="sudo /usr/bin/X :1"
 
 # git
 git() {
