@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/walter/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -85,8 +85,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 # library
-export PYTHONPATH=/home/admin/caffe/python:$PYTHONPATH
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/../../usr/local/cuda/lib64:~/../../usr/local/lib/python2.7/dist-packages/torch/lib/
 
 # Plugin
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -102,7 +100,6 @@ alias l='ls -CF'
 alias ll="ls -al"                   # List all files in current directory in long list format
 alias ld="ls -ld"
 alias ldir="ls -al | grep ^d"       # List all directories in current directory in long list format
-#alias lt='ls -At1 && echo "--Oldest--"'
 alias lt='ls -lth'
 alias ltr='ls -Art1 && echo "--Newest--"'
 alias ln='_ln() { ls -l $1 | wc -l;}; _ln'
@@ -122,9 +119,7 @@ alias clc='clear'
 alias ta='tmux a'
 alias tl='tmux ls'
 
-
 # gpu
-alias gpustate='sh ~/.script/gpu_state.sh'
 alias usegpu='_usegpu() { export CUDA_VISIBLE_DEVICES="$1";}; _usegpu'
 alias whichgpu='echo $CUDA_VISIBLE_DEVICES'
 alias loop='_loop() { while [ : ]; do $1; sleep $2; clear; done;}; _loop'
@@ -133,8 +128,9 @@ alias loop='_loop() { while [ : ]; do $1; sleep $2; clear; done;}; _loop'
 alias ax="chmod a+x"                                               # make executable
 
 # tensorflow
-alias tb="/home/walter/.local/bin/tb"
-alias imageserver="/home/walter/.local/bin/imageserver"
+alias tb="$HOME/.local/bin/tb"
+alias gpustat="$HOME/.local/bin/gpustat"
+alias imageserver="$HOME/.local/bin/imageserver"
 
 # tools
 alias py="python"
